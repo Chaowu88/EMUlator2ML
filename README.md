@@ -30,11 +30,11 @@ In Col 4, 0 denotes irreversible and 1 denotes reversible.
 
 |#constraints|lower_bound|upper_bound|
 |---|---|---|
-|#flux value (mandatory, single value, no lb or ub)|
+|#flux value|
 |v66|100||
-|#ratio range (optional, net reactions)|
+|#ratio range|
 |v2/v1|0.1|0.4|
-|#flux range (mandatory, "allR" to assign all reverible reactions, "allIR" to assign irreversible reactions)|
+|#flux range|
 |allIR|0|200|
 |allR|-200|200|
 
@@ -46,9 +46,7 @@ Assignmet of flux range is mandatory. Use "allR" to assign all reverible reactio
 >-sf, --subsFiles: file(s) with substrate labeling info in the format of "tracer::path", sep by "," for parallel labeling. See below as an example
 
 |#substrate|percentage|purity|labeling_pattern|
-#fully unlabeled substrate can be omitted, whether omitted or not, purity of fully unlabeled substrate is meanless
-#sum of percentage should be 1 or less than 1, in the second case, the remainder is considered as fully unlabeled (natural substrate)
-#different substrates are allowed
+|---|---|---|---|
 |GlcEX|0.754|0.997|1,0,0,0,0,0|
 |GlcEX|0.246|0.994|1,1,1,1,1,1|
 
