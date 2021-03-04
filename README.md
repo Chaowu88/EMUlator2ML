@@ -63,7 +63,7 @@ Different substrates are allowed.
 -q, --quantile: generated flux values in the quantile interval (i.e. [0.5 - quantile/2, 0.5 + quantile/2]) are preserved for each reaction, intersection of each flux sets are preserved as final dataset\
 -nj, --njobs: the number of jobs to run in parallel
 
-example:
+__Example:__
 ```
 
 ```
