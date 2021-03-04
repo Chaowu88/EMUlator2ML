@@ -11,8 +11,13 @@ Scikit-learn v0.21.2\
 SymPy v1.4\
 TensorFlow v2.0.0\
 ## Usage
-__main1.py__ generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.\
+__main1.py__ generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.
 
 __Arguments:__
 >-o, --outDir: output directory\
--s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","\
+-s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","
+-rf, --rxnsFile: reaction file of a metabolic network, lines starts with "#" will be ignored. See below as an example
+|#reaction_ID|substrate_IDs(atom)|product_IDs(atom)|reversibility|
+|---|---|---|---|
+|v1|G6P(abcdef)|F6P(abcdef)|1|
+|v2|F6P(abcdef)+ATP|FBP(abcdef)|0|
