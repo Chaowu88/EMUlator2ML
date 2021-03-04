@@ -1,0 +1,90 @@
+#reaction_ID	substrate_IDs(atom)	product_IDs(atom)	reversibility
+#Glycolysis			
+v1	G6P(abcdef)	F6P(abcdef)	1
+v2	F6P(abcdef)+ATP	FBP(abcdef)	0
+v3	FBP(abcdef)	DHAP(cba)+GAP(def)	1
+v4	DHAP(abc)	GAP(abc)	1
+v5	GAP(abc)	G3P(abc)+ATP+NADH	1
+v6	G3P(abc)	PEP(abc)	1
+v7	PEP(abc)	Pyr(abc)+ATP	0
+#Pentose phosphate pathway			
+v8	G6P(abcdef)	PGluc(abcdef)+NADPH	0
+v9	PGluc(abcdef)	Ru5P(bcdef)+CD(a)+NADPH	0
+v10	Ru5P(abcde)	X5P(abcde)	1
+v11	Ru5P(abcde)	R5P(abcde)	1
+v12	X5P(abcde)	TK(ab)+GAP(cde)	1
+v13	F6P(abcdef)	TK(ab)+E4P(cdef)	1
+v14	S7P(abcdefg)	TK(ab)+R5P(cdefg)	1
+v15	F6P(abcdef)	TA(abc)+GAP(def)	1
+v16	S7P(abcdefg)	TA(abc)+E4P(defg)	1
+#Entner-Doudoroff pathway			
+v17	PGluc(abcdef)	KDPG(abcdef)	0
+v18	KDPG(abcdef)	Pyr(abc)+GAP(def)	0
+#TCA cycle			
+v19	Pyr(abc)	AcCoA(bc)+CD(a)+NADH	0
+v20	OAA(abcd)+AcCoA(ef)	Cit(efbcda)	0
+v21	Cit(abcdef)	ICit(abcdef)	1
+v22	ICit(abcdef)	AKG(abcde)+CD(f)+NADPH	1
+v23	AKG(abcde)	SucCoA(bcde)+CD(a)+NADH	0
+v24	SucCoA(abcd)+ADP	Suc(0.5abcd,0.5dcba)+ATP	1
+v25	Suc(0.5abcd,0.5dcba)+NAD	Fum(0.5abcd,0.5dcba)+FADH	0
+v26	Fum(0.5abcd,0.5dcba)	Mal(abcd)	1
+v27	Mal(abcd)+NAD	OAA(abcd)+NADH	1
+#Amphibolic reactions			
+v28	Mal(abcd)	Pyr(abc)+CD(d)+NADPH	0
+v29	Mal(abcd)	Pyr(abc)+CD(d)+NADH	0
+v30	PEP(abc)+CD(d)	OAA(abcd)	0
+v31	OAA(abcd)+ATP	PEP(abc)+CD(d)	0
+#Acetic acid formation			
+v32	AcCoA(ab)	Ac(ab)+ATP	0
+#PDO biosynthesis			
+v33	DHAP(abc)+NADH	Glyc3P(abc)	1
+v34	Glyc3P(abc)	Glyc(abc)	0
+v35	Glyc(abc)	HPA(abc)	0
+v36	HPA(abc)+NADPH	PDO(abc)	0
+#Amino acid biosynthesis			
+v37	AKG(abcde)+NADPH+Ammo	Glu(abcde)	0
+v38	Glu(abcde)+ATP+Ammo	Gln(abcde)	0
+v39	Glu(abcde)+ATP+2NADPH	Pro(abcde)	0
+v40	Glu(abcde)+CD(f)+Gln(ghijk)+Asp(lmno)+AcCoA(pq)+5ATP+NADPH	Arg(abcdef)+AKG(ghijk)+Fum(lmno)+Ac(pq)	0
+v41	OAA(abcd)+Glu(efghi)	Asp(abcd)+AKG(efghi)	0
+v42	Asp(abcd)+2ATP+Ammo	Asn(abcd)	0
+v43	Pyr(abc)+Glu(defgh)	Ala(abc)+AKG(defgh)	0
+v44	G3P(abc)+Glu(defgh)	Ser(abc)+AKG(defgh)+NADH	0
+v45	Ser(abc)	Gly(ab)+MEETHF(c)	1
+v46	Gly(ab)	CD(a)+MEETHF(b)+NADH+Ammo	1
+v47	Thr(abcd)	Gly(ab)+AcCoA(cd)+NADH	0
+v48	Ser(abc)+AcCoA(de)+3ATP+4NADPH+Sulf	Cys(abc)+Ac(de)	0
+v49	Asp(abcd)+Pyr(efg)+Glu(hijkl)+SucCoA(mnop)+ATP+2NADPH	LLDAP(abcdgfe)+AKG(hijkl)+Suc(0.5mnop,0.5ponm)	0
+v50	LLDAP(abcdefg)	Lys(abcdef)+CD(g)	0
+v51	Asp(abcd)+2ATP+2NADPH	Thr(abcd)	0
+v52	Asp(abcd)+METHF(e)+Cys(fgh)+SucCoA(ijkl)+ATP+2NADPH	Met(abcde)+Pyr(fgh)+Suc(0.5ijkl,0.5lkji)+Ammo	0
+v53	Pyr(abc)+Pyr(def)+Glu(ghijk)+NADPH	Val(abcef)+CD(d)+AKG(ghijk)	0
+v54	AcCoA(ab)+Pyr(cde)+Pyr(fgh)+Glu(ijklm)+NADPH	Leu(abdghe)+CD(c)+CD(f)+AKG(ijklm)+NADH	0
+v55	Thr(abcd)+Pyr(efg)+Glu(hijkl)+NADPH	Ile(abfcdg)+CD(e)+AKG(hijkl)+NADP+Ammo	0
+v56	PEP(abc)+PEP(def)+E4P(ghij)+Glu(klmno)+ATP+NADPH	Phe(abcefghij)+CD(d)+AKG(klmno)	0
+v57	PEP(abc)+PEP(def)+E4P(ghij)+Glu(klmno)+ATP+NADPH	Tyr(abcefghij)+CD(d)+AKG(klmno)+NADH	0
+v58	Ser(abc)+R5P(defgh)+PEP(ijk)+E4P(lmno)+PEP(pqr)+Gln(stuvw)+3ATP+NADPH	Trp(abcedklmnoj)+CD(i)+GAP(fgh)+Pyr(pqr)+Glu(stuvw)	0
+v59	R5P(abcde)+FTHF(f)+Gln(ghijk)+Asp(lmno)+5ATP	His(edcbaf)+AKG(ghijk)+Fum(lmno)+2NADH	0
+#One-carbon metabolism			
+v60	MEETHF(a)+NADH	METHF(a)	0
+v61	MEETHF(a)	FTHF(a)+NADPH	0
+#Oxidative phosphorylation			
+v62	NADH+0.5Oxy	3ATP	0
+v63	FADH+0.5Oxy	2ATP	0
+#Transhydrogenation			
+v64	NADH	NADPH	1
+#ATP hydrolysis			
+v65	ATP	ATPEX	0
+#Transport			
+v66	GlcEX(abcdef)+ATP	G6P(abcdef)	0
+v67	CitEX(abcdef)	Cit(abcdef)	0
+v68	Glyc(abc)	GlycEX(abc)	1
+v69	PDO(abc)	PDOEX(abc)	0
+v70	Ac(ab)	AcEX(ab)	0
+v71	CD(a)	CDEX(a)	0
+v72	OxyEX	Oxy	0
+v73	AmmoEX	Ammo	0
+v74	SulfEX	Sulf	0
+#Biomass formation			
+v75	0.488Ala+0.281Arg+0.229Asn+0.229Asp+0.087Cys+0.250Glu+0.250Gln+0.582Gly+0.090His+0.276Ile+0.428Leu+0.326Lys+0.146Met+0.176Phe+0.210Pro+0.205Ser+0.241Thr+0.054Trp+0.131Tyr+0.402Val+0.205G6P+0.071F6P+0.754R5P+0.129GAP+0.619G3P+0.051PEP+0.083Pyr+2.510AcCoA+0.087AKG+0.340OAA+0.443MEETHF+33.247ATP+5.363NADPH	39.68Biomass+1.455NADH	0
