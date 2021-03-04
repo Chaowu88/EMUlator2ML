@@ -24,6 +24,7 @@ __Arguments:__
 |v2|F6P(abcdef)+ATP|FBP(abcdef)|0|
 
 In Col 2 and 3, letters in parenthesis denotes atom mapping in the reaction. For metabolites with equivalents (e.g. chiral and prochiral metabolites), the atom mapping should be written as "0.5abcd,0.5dcba" which means a four-carbon metabolite with two equivalents.
+
 In Col 4, 0 denotes irreversible and 1 denotes reversible
 >-cf, --consFile: file with mass balance constraints, include assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
 
