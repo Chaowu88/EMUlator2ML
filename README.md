@@ -16,7 +16,7 @@ __main1.py__ generates dataset of flux ratios at metabilic nodes and simulated m
 __Arguments:__
 >-o, --outDir: output directory\
 -s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","\
--rf, --rxnsFile: reaction file of a metabolic network. Lines starts with "#" will be ignored. See below as an example
+-rf, --rxnsFile: .tsv file with reactions of a metabolic network. Lines starts with "#" will be ignored. See below as an example
 
 |#reaction_ID|substrate_IDs(atom)|product_IDs(atom)|reversibility|
 |---|---|---|---|
@@ -26,5 +26,15 @@ __Arguments:__
 In Col 2 and 3, letters in parenthesis denotes atom mapping in the reaction. For metabolites with equivalents (e.g. chiral and prochiral metabolites), the atom mapping should be written as "0.5abcd,0.5dcba" which means a four-carbon metabolite with two equivalents.
 
 In Col 4, 0 denotes irreversible and 1 denotes reversible
->-cf, --consFile: file with mass balance constraints, include assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
+>-cf, --consFile: .tsv file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
+
+|#constraints|lower_bound|upper_bound|
+|---|---|---|
+|#flux value (mandatory, single value, no lb or ub)|
+|v66|100||
+|#ratio range (optional, net reactions)|
+|v2/v1|0.1|0.4|
+|#flux range (mandatory, "allR" to assign all reverible reactions, "allIR" to assign irreversible reactions)|
+|allIR|0|200|
+|allR|-200|200|
 
