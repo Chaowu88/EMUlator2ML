@@ -17,6 +17,7 @@ __Arguments:__
 >-o, --outDir: output directory\
 -s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","\
 -rf, --rxnsFile: reaction file of a metabolic network, lines starts with "#" will be ignored. See below as an example\
+
 |#reaction_ID|substrate_IDs(atom)|product_IDs(atom)|reversibility|
 |---|---|---|---|
 |v1|G6P(abcdef)|F6P(abcdef)|1|
