@@ -12,6 +12,7 @@ SymPy v1.4\
 TensorFlow v2.0.0\
 ## Usage
 __main1.py__ generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.\
+
 __Arguments:__
->-o, --outDir: output directory
--s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","
+>-o, --outDir: output directory\
+-s, --simEMUs: EMUs (elementary metabolite units) to simulate, spe by ","\
