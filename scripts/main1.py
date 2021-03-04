@@ -29,8 +29,8 @@ if __name__ == '__main__':
 	parser.add_argument('-sf', '--subsFiles', type = str, required = True, help = 'file(s) with substrate labeling info, in the format of "tracer::path", sep by "," for parallel labeling')
 	parser.add_argument('-exm', '--exMetabs', type = str, required = False, help = 'metabolites excluded from mass balance, sep by ","')
 	parser.add_argument('-exn', '--exNodes', type = str, required = False, help = 'node metabolites excluded for ratio selection, sep by ","')
-	parser.add_argument('-ns', '--nsims', type = int, required = True, help = 'number of flux distribution to simulate')
-	parser.add_argument('-q', '--quantile', type = float, required = True, help = 'simulated values in the quantile interval (i.e. [0.5 - quantile/2, 0.5 + quantile/2]) are preserved, for multiple simulations, union of the quantile values are preserved')
+	parser.add_argument('-ns', '--nsims', type = int, required = True, help = 'number of random flux distribution to generate')
+	parser.add_argument('-q', '--quantile', type = float, required = True, help = 'generated flux values in the quantile interval (i.e. [0.5 - quantile/2, 0.5 + quantile/2]) are preserved for each reaction, intersection of each flux sets are preserved as final dataset')
 	parser.add_argument('-nj', '--njobs', type = int, required = True, help = 'number of jobs to run in parallel')
 	args = parser.parse_args()
 
