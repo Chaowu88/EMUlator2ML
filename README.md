@@ -25,8 +25,8 @@ __Arguments:__
 
 In Col 2 and 3, letters in parenthesis denotes atom mapping in the reaction. For metabolites with equivalents (e.g. chiral and prochiral metabolites), the atom mapping should be written as "0.5abcd,0.5dcba" which means a four-carbon metabolite with two equivalents.
 
-In Col 4, 0 denotes irreversible and 1 denotes reversible
->-cf, --consFile: .tsv file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
+In Col 4, 0 denotes irreversible and 1 denotes reversible.
+>-cf, --consFile: .tsv file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. "#flux value", "#ratio range" and "#flux range" tell the program the subsequent assignment of fluxes, flux ratios and flux ranges, respectively. See below as an example
 
 |#constraints|lower_bound|upper_bound|
 |---|---|---|
@@ -37,4 +37,29 @@ In Col 4, 0 denotes irreversible and 1 denotes reversible
 |#flux range (mandatory, "allR" to assign all reverible reactions, "allIR" to assign irreversible reactions)|
 |allIR|0|200|
 |allR|-200|200|
+
+Assignmet of flux value is mandatory with a single value. It's usually used to standardize a flux distribution by setting the uptake flux to 100.
+
+Assignmet of ratio range is optional, and symbolic expression is acceptable.
+
+Assignmet of flux range is mandatory. Use "allR" to assign all reverible reactions, and "allIR" to assign all irreversible reactions.
+>-sf, --subsFiles: file(s) with substrate labeling info in the format of "tracer::path", sep by "," for parallel labeling. See below as an example
+
+|#substrate|percentage|purity|labeling_pattern|
+#fully unlabeled substrate can be omitted, whether omitted or not, purity of fully unlabeled substrate is meanless
+#sum of percentage should be 1 or less than 1, in the second case, the remainder is considered as fully unlabeled (natural substrate)
+#different substrates are allowed
+|GlcEX|0.754|0.997|1,0,0,0,0,0|
+|GlcEX|0.246|0.994|1,1,1,1,1,1|
+
+"percentage" denotes the molar percentage of corresponding labeling pattern; "purity" denotes the isotopic purity of corresponding labeling pattern; "labeling_pattern" indicates how the substrate is labeled with each bit denoting whether corresponding carbon is labeled.
+
+User don't need to record natural substrates.
+
+For each labeled substrate, sum of percentage should be 1 or less than 1. In the second case, the remainder is considered as fully unlabeled (natural substrate).
+
+Different substrates are allowed.
+
+
+
 
