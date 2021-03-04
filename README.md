@@ -57,7 +57,8 @@ User don't need to record natural substrates.
 For each labeled substrate, sum of percentage should be 1 or less than 1. In the second case, the remainder is considered as fully unlabeled (natural substrate).
 
 Different substrates are allowed.
-
-
-
+>-exm, --exMetabs: metabolites excluded from mass balance, sep by ","\
+-exn, --exNodes: node metabolites excluded for ratio selection, sep by ","\
+-ns, --nsims: the number of random flux distributions to generate\
+-q, --quantile: 
 
