@@ -159,7 +159,7 @@ Notes.
 1. Assignmet of flux value is mandatory with mean and SD. Set SD to 0 if no replicate.
 2. Assignmet of ratio value is mandatory, and symbolic expression is acceptable. Note "v\*_f" denotes forward flux and "v\*_b" denotes backward flux.
 3. Assignmet of flux range is optional. Use "all" to assign all (nonnegative) reactions.
->-exm, --exMetabs: metabolites excluded from mass balance, sep by ","
+>-exm, --exMetabs: metabolites excluded from mass balance, sep by ","\
 -nr, --nruns: the number of runs to estimate uncentainties using Monte Carlo method, default 1000
 
 __Example:__
