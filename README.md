@@ -9,7 +9,7 @@ EMUlator2ML was developed and tested using Python 3.6+ with the following packag
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SciPy&nbsp;&nbsp;&nbsp;&nbsp;v1.3.1\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scikit-learn&nbsp;&nbsp;&nbsp;&nbsp;v0.21.2\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SymPy&nbsp;&nbsp;&nbsp;&nbsp;v1.4\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TensorFlow&nbsp;&nbsp;&nbsp;&nbsp;v2.0.0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TensorFlow with GPU support&nbsp;&nbsp;&nbsp;&nbsp;v2.0.0
 ## Usage
 ___main1.py___ generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.
 
