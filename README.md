@@ -122,6 +122,7 @@ Notes.
 >-mf, --MDVsFile: file of measured MDVs, fields include mean and sd. Set sd to 0 if no replicates. Lines starts with "#" will be ignored. See below as an example
 
 |#feature|mean|sd|
+|---|---|---|
 |1-U-Glc_Ala23_m0|0.639773192|0.01|
 |1-U-Glc_Ala23_m1|0.148613755|0.01|
 |1-U-Glc_Ala23_m2|0.211613052|0.01|
