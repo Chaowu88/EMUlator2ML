@@ -22,6 +22,7 @@ __Arguments:__
 |---|---|---|---|
 |v1|G6P(abcdef)|F6P(abcdef)|1|
 |v2|F6P(abcdef)+ATP|FBP(abcdef)|0|
+|...|...|...|...|
 
 Notes.
 1. In Col 2 and 3, letters in parenthesis denotes atom mapping in the reaction. For metabolites with equivalents (e.g. chiral and prochiral metabolites), the atom mapping should be written as "0.5abcd,0.5dcba" which means a four-carbon metabolite with two equivalents.
@@ -32,11 +33,14 @@ Notes.
 |---|---|---|
 |#flux value|
 |v66|100||
+|...|...|...|
 |#ratio range|
 |v2/v1|0.1|0.4|
+|...|...|...|
 |#flux range|
 |allIR|0|200|
 |allR|-200|200|
+|...|...|...|
 
 Notes.
 1. Assignmet of flux value is mandatory with a single value. It's usually used to standardize a flux distribution by setting the uptake flux to 100.
@@ -48,6 +52,7 @@ Notes.
 |---|---|---|---|
 |GlcEX|0.754|0.997|1,0,0,0,0,0|
 |GlcEX|0.246|0.994|1,1,1,1,1,1|
+|...|...|...|...|
 
 Notes.
 1. "percentage" denotes the molar percentage of corresponding labeling pattern; "purity" denotes the isotopic purity of corresponding labeling pattern; "labeling_pattern" indicates how the substrate is labeled with each bit denoting whether corresponding carbon is labeled.
@@ -69,7 +74,7 @@ __Note：__
 It is highly recommended to run this script in a HPC cluster.
 <br></br>
 
-___main2.py___ select MDV features according to importance and select the best estimator for each flux ratio.
+___main2.py___ selects MDV features according to importance and select the best estimator for each flux ratio.
 
 __Arguments:__
 >-o, --outDir: output directory\
@@ -78,6 +83,7 @@ __Arguments:__
 |r1|r2|...|1-U-Glc_Ala23_m0|1-U-Glc_Ala23_m1|1-U-Glc_Ala23_m2|...|
 |---|---|---|---|---|---|---|
 |0.093221201|0.906778799|...|0.639773192|0.148613755|0.211613052|...|
+|...|...|...|...|...|...|...|
 
 Notes.
 1. ID of MDV feature is presented as "labeling strategy_EMU ID_m*"
@@ -91,9 +97,29 @@ Notes.
 
 __Example:__
 ```
-python path/to/main2.py -o path/to/selected_models -df path/to/generated_data/ratios_MDVs.tsv -r all -n 0.01 -c 5% -m lsvm,knn,dt,rf,gtb -w 12 -e no -nj 30
+python path/to/main2.py -o path/to/selected_models -df path/to/generated_data/ratios_MDVs.tsv -r all -n 0.01 -c 5% -m lsvm,knn,dt,rf,gtb,dnn -w 12 -e no -nj 30
 ```
 __Note：__
 
 It is highly recommended to run this script in a HPC cluster.
 <br></br>
+
+___main3.py___ predicts flux ratios from measured metabolite MDVs using trained ML models.
+
+__Arguments:__
+>-o, --outDir: output directory\
+-cf, --configFile: config file for flux ratio prediction, fields include ratio_ID, model_path, errormodel_path (optional) and feature_path. See below as an example
+
+|#ratio_ID|model_path|errormodel_path|feature_path|
+|---|---|---|---|
+|r3|path/to/selected_models/r3/dnn.h5|path/to/selected_models/r3/selected_features.tsv|
+|...|...|...|...|
+
+Notes.
+
+
+
+
+
+
+
