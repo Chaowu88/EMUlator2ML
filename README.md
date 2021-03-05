@@ -112,11 +112,11 @@ __Arguments:__
 
 |#ratio_ID|model_path|errormodel_path|feature_path|
 |---|---|---|---|
-|r3|path/to/selected_models/r3/dnn.h5|path/to/selected_models/r3/selected_features.tsv|
+|r3|path/to/selected_models/r3/dnn.h5||path/to/selected_models/r3/selected_features.tsv|
 |...|...|...|...|
 
 Notes.
-
+1. 
 
 
 
