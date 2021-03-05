@@ -62,5 +62,7 @@ Notes.
 
 __Example:__
 ```
-
+python path/to/main1.py -o path/to/generated_data -s Ala23,Ala123,Gly2,Gly12,Val2345,Val12345,Leu23456,Ile23456,Ser23,Ser123,Thr234,Thr1234,Phe12,Phe23456789,Phe123456789,Asp12,Asp234,Asp1234,Glu2345,Glu12345,Tyr12 -rf path/to/Reactions.tsv -cf path/to/Simulation_constraints.tsv -sf 1-U-Glc::path/to/Labeled_substrates_1-U-Glc.tsv -exn CD -ns 10000 -q 0.99 -nj 30
 ```
+__Note__
+It is highly recommended to run this script in a HPC cluster.
