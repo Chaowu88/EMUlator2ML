@@ -23,7 +23,7 @@ __Arguments:__
 |v1|G6P(abcdef)|F6P(abcdef)|1|
 |v2|F6P(abcdef)+ATP|FBP(abcdef)|0|
 
-Notes.
+Notes.\
 1. In Col 2 and 3, letters in parenthesis denotes atom mapping in the reaction. For metabolites with equivalents (e.g. chiral and prochiral metabolites), the atom mapping should be written as "0.5abcd,0.5dcba" which means a four-carbon metabolite with two equivalents.
 2. In Col 4, 0 denotes irreversible and 1 denotes reversible.
 >-cf, --consFile: .tsv file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. "#flux value", "#ratio range" and "#flux range" tell the program the subsequent assignment of fluxes, flux ratios and flux ranges, respectively. See below as an example
@@ -38,7 +38,7 @@ Notes.
 |allIR|0|200|
 |allR|-200|200|
 
-Notes.
+Notes.\
 1. Assignmet of flux value is mandatory with a single value. It's usually used to standardize a flux distribution by setting the uptake flux to 100.
 2. Assignmet of ratio range is optional, and symbolic expression is acceptable.
 3. Assignmet of flux range is mandatory. Use "allR" to assign all reverible reactions, and "allIR" to assign all irreversible reactions.
@@ -49,7 +49,7 @@ Notes.
 |GlcEX|0.754|0.997|1,0,0,0,0,0|
 |GlcEX|0.246|0.994|1,1,1,1,1,1|
 
-Notes.
+Notes.\
 1. "percentage" denotes the molar percentage of corresponding labeling pattern; "purity" denotes the isotopic purity of corresponding labeling pattern; "labeling_pattern" indicates how the substrate is labeled with each bit denoting whether corresponding carbon is labeled.
 2. User don't need to record natural substrates.
 3. For each labeled substrate, sum of percentage should be 1 or less than 1. In the second case, the remainder is considered as fully unlabeled (natural substrate).
@@ -65,4 +65,8 @@ __Example:__
 python path/to/main1.py -o path/to/generated_data -s Ala23,Ala123,Gly2,Gly12,Val2345,Val12345,Leu23456,Ile23456,Ser23,Ser123,Thr234,Thr1234,Phe12,Phe23456789,Phe123456789,Asp12,Asp234,Asp1234,Glu2345,Glu12345,Tyr12 -rf path/to/Reactions.tsv -cf path/to/Simulation_constraints.tsv -sf 1-U-Glc::path/to/Labeled_substrates_1-U-Glc.tsv -exn CD -ns 10000 -q 0.99 -nj 30
 ```
 __Note__
+
 It is highly recommended to run this script in a HPC cluster.
+
+
+
