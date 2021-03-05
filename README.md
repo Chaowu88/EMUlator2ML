@@ -67,7 +67,7 @@ python path/to/main1.py -o path/to/generated_data -s Ala23,Ala123,Gly2,Gly12,Val
 __Note：__
 
 It is highly recommended to run this script in a HPC cluster.
-<br><\br>
+<br></br>
 
 ___main2.py___ select MDV features according to importance and select the best estimator for each flux ratio.
 
