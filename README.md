@@ -157,6 +157,13 @@ __Arguments:__
 
 Notes.
 1. Assignmet of flux value is mandatory with mean and SD. Set SD to 0 if no replicate.
-2. Assignmet of ratio value is mandatory, and symbolic expression is acceptable. Note "v\*_f" denote
-3. Assignmet of flux range is mandatory. Use "allR" to assign all reverible reactions, and "allIR" to assign all irreversible reactions.
+2. Assignmet of ratio value is mandatory, and symbolic expression is acceptable. Note "v\*_f" denotes forward flux and "v\*_b" denotes backward flux.
+3. Assignmet of flux range is optional. Use "all" to assign all (nonnegative) reactions.
+>-exm, --exMetabs: metabolites excluded from mass balance, sep by ","
+-nr, --nruns: the number of runs to estimate uncentainties using Monte Carlo method, default 1000
 
+__Example:__
+```
+python path/to/main4.py -o path/to/estimateted_fluxes -rf path/to/Reactions.tsv -cf path/to/Measured_constraints.tsv -nr 1000
+```
+<br>
