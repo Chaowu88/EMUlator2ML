@@ -121,7 +121,7 @@ Notes.
 3. feature_path can be selected features, sep by ",". In this case, the order is important.
 >-mf, --MDVsFile: file of measured MDVs, fields include mean and sd. Set sd to 0 if no replicates. Lines starts with "#" will be ignored. See below as an example
 
-|#feature|mean|sd|
+|#feature|mean|SD|
 |---|---|---|
 |1-U-Glc_Ala23_m0|0.639773192|0.01|
 |1-U-Glc_Ala23_m1|0.148613755|0.01|
@@ -140,8 +140,23 @@ ___main4.py___ estimated global metabolic fluxes based on mass balance constrain
 
 __Arguments:__
 >-o, --outDir: output directory\
+-rf, --rxnsFile: the same as in main1.py
+-cf, --consFile: file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
 
+|#constraints|mean(lower_bound)|SD(upper_bound)|
+|---|---|---|
+|#flux value|
+|v66|100|1|
+|...|...|...|
+|#ratio value|
+|1.0\*v3_b/(1.0\*v2 + 1.0\*v3_b)|0.572433352|0.031303227|
+|...|...|...|
+|#flux range|
+|all|0|200|
+|...|...|...|
 
-
-
+Notes.
+1. Assignmet of flux value is mandatory with mean and SD. Set SD to 0 if no replicate.
+2. Assignmet of ratio value is mandatory, and symbolic expression is acceptable. Note "v\*_f" denote
+3. Assignmet of flux range is mandatory. Use "allR" to assign all reverible reactions, and "allIR" to assign all irreversible reactions.
 
