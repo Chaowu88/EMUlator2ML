@@ -101,7 +101,7 @@ python path/to/main2.py -o path/to/selected_models -df path/to/generated_data/ra
 ```
 __Note：__
 
-It is highly recommended to run this script in a HPC cluster.
+It is highly recommended to run this script in a HPC cluster with GPU support.
 <br></br>
 
 ___main3.py___ predicts flux ratios from measured metabolite MDVs using trained ML models.
