@@ -11,7 +11,7 @@ EMUlator2ML was developed and tested using Python 3.6+ with the following packag
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SymPy&nbsp;&nbsp;&nbsp;&nbsp;v1.4\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TensorFlow&nbsp;&nbsp;&nbsp;&nbsp;v2.0.0
 ## Usage
-__main1.py__ generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.
+### main1.py generates dataset of flux ratios at metabilic nodes and simulated metabolite MDVs at random flux distributions.
 
 __Arguments:__
 >-o, --outDir: output directory\
@@ -69,5 +69,5 @@ __Note：__
 It is highly recommended to run this script in a HPC cluster.
 
 
-__main2.py__ select MDV features according to importance and select the best estimator for each flux ratio.
+### main2.py__ select MDV features according to importance and select the best estimator for each flux ratio.
 
