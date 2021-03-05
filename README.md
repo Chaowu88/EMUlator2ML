@@ -6,8 +6,8 @@ EMUlator2ML was developed and tested using Python 3.6+ with the following packag
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matplotlib v3.1.1\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NumPy v1.16.4\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pandas        v0.25.1\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SciPy          v1.3.1\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scikit-learn   v0.21.2\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SciPy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v1.3.1\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scikit-learn&nbsp;&nbsp;v0.21.2\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SymPy v1.4\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TensorFlow v2.0.0
 ## Usage
