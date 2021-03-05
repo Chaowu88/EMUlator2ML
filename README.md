@@ -79,3 +79,21 @@ __Arguments:__
 |---|---|---|---|---|---|---|
 |0.093221201|0.906778799|...|0.639773192|0.148613755|0.211613052|...|
 
+Notes.
+1. ID of MDV feature is presented as "labeling strategy_EMU ID_m*"
+>-r, --ratios: flux ratios to predict, sep by ",". Use "all" to select all ratios\
+-n, --noise: SD of normally distributed noise added to MDV features, default 0.01\
+-c, --criteria: how features are selected. If "mean" or "median" or float, features with importance above mean or median or criteria will be selected; if "\*\*%", the top criteria percent of total features will be selected; if int, the top criteria of total features will be selected\
+-m, --methods: ML methods to test, sep by ",". Specifically, "pr" for polynomial regression, "lsvm" for linear support vector machine, "knn" for k-nearest neighbors, "dt" for decision tree, "rf" for random forst, "gtb" for gradient tree boosting, "mlp" for multilayer perceptron and "dnn" for deep neural network\
+-w, --runWhich: "1" only run MDV feature selection; "2" only run ML method tuning and selection; "12" (default) run both\
+-e, --ifError: whether to train a error model, "yes" or "no". Valid only if runWhich == "2" or "12"\
+-nj, --njobs: the number of jobs to run in parallel
+
+__Example:__
+```
+python path/to/main2.py -o path/to/selected_models -df path/to/generated_data/ratios_MDVs.tsv -r all -n 0.01 -c 5% -m lsvm,knn,dt,rf,gtb -w 12 -e no -nj 30
+```
+__Note：__
+
+It is highly recommended to run this script in a HPC cluster.
+<br></br>
