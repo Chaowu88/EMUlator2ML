@@ -140,7 +140,7 @@ ___main4.py___ estimated global metabolic fluxes based on mass balance constrain
 
 __Arguments:__
 >-o, --outDir: output directory\
--rf, --rxnsFile: the same as in main1.py
+-rf, --rxnsFile: the same as in main1.py\
 -cf, --consFile: file with mass balance constraints including assignmet of fluxes, flux ratios and flux ranges. Lines starts with "#" will be ignored. See below as an example
 
 |#constraints|mean(lower_bound)|SD(upper_bound)|
