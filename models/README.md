@@ -1,1 +1,1 @@
-This folder includes three pre-trained models for flux ratio prediction of *E. coli*, *A. vinelandii* and *Synechocystis* using DNN. The networks are fed with \[U-<sup>13</sup>C\] /natural glucose (20:80 mol/mol) in heterotrophic, heterotrophic and mixotrophic growth mode, respectively.
+This folder includes three pre-trained models for flux ratio prediction of *E. coli*, *A. vinelandii* and *Synechocystis* using DNN. The networks are fed with \[U-<sup>13</sup>C\]/natural glucose (20:80 mol/mol) in heterotrophic, heterotrophic and mixotrophic growth mode, respectively.
