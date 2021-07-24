@@ -1,0 +1,6 @@
+#substrate	percentage	purity	labeling_pattern
+#fully unlabeled substrate can be omitted, whether omitted or not, purity of fully unlabeled substrate is meanless
+#sum of percentage should be 1 or less than 1, in the second case, the remainder is considered as fully unlabeled (natural substrate)
+#different substrates are allowed
+GlcEX	0.754	0.997	1,0,0,0,0,0
+GlcEX	0.246	0.994	1,1,1,1,1,1
