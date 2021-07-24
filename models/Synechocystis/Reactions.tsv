@@ -1,0 +1,46 @@
+#reaction_ID	reactant_IDs(atom)	product_IDs(atom)	reversibility
+#Glycolysis and OPP pathway			
+v1	G6P(abcdef)	F6P(abcdef)	1
+v2	F6P(abcdef)	FBP(abcdef)	1
+v3	FBP(abcdef)	DHAP(cba)+GAP(def)	1
+v4	DHAP(abc)	GAP(abc)	1
+v5	GAP(abc)	G3P(abc)	1
+v6	G3P(abc)	G2P(abc)	1
+v7	G2P(abc)	PEP(abc)	1
+v8	PEP(abc)	Pyr(abc)	0
+v9	G6P(abcdef)	Ru5P(bcdef)+CD(a)	0
+#CBB cycle			
+v10	Ru5P(abcde)	X5P(abcde)	1
+v11	Ru5P(abcde)	R5P(abcde)	1
+v12	Ru5P(abcde)	RuBP(abcde)	0
+v13	RuBP(abcde)+CD(f)	G3P(cde)+G3P(fba)	0
+v14	X5P(abcde)	TK(ab)+GAP(cde)	1
+v15	F6P(abcdef)	TK(ab)+E4P(cdef)	1
+v16	S7P(abcdefg)	TK(ab)+R5P(cdefg)	1
+v17	F6P(abcdef)	TA(abc)+GAP(def)	1
+v18	S7P(abcdefg)	TA(abc)+E4P(defg)	1
+v19	DHAP(abc)+E4P(defg)	SBP(cbadefg)	0
+v20	SBP(abcdefg)	S7P(abcdefg)	0
+#TCA cycle			
+v21	Pyr(abc)	AcCoA(bc)+CD(a)	0
+v22	OAA(abcd)+AcCoA(ef)	Cit(dcbfea)	0
+v23	Cit(abcdef)	ICit(abcdef)	1
+v24	ICit(abcdef)	AKG(abcde)+CD(f)	0
+v25	AKG(abcde)	Suc(bcde)+CD(a)	0
+v26	Suc(0.5abcd,0.5dcba)	Fum(0.5abcd,0.5dcba)	1
+v27	Fum(0.5abcd,0.5dcba)	Mal(abcd)	1
+v28	Mal(abcd)	OAA(abcd)	1
+#Amphibolic reactions			
+v29	Mal(abcd)	Pyr(abc)+CD(d)	0
+v30	PEP(abc)+CD(d)	OAA(abcd)	0
+#Photorespiration			
+v31	RuBP(abcde)	G3P(cde)+PG(ba)	0
+v32	PG(ab)	Gcl(ab)	0
+v33	Gcl(ab)	Glyox(ab)	0
+v34	Glyox(ab)+Glyox(cd)	Gcr(abc)+CD(d)	0
+v35	Gcr(abc)	G3P(abc)	1
+#Transport			
+v36	GlcEX(abcdef)	G6P(abcdef)	0
+v37	CDEX(a)	CD(a)	0
+#biomass formation			
+v38	0.715R5P+3.624AcCoA+1.191G6P+0.501E4P+1.205G3P+1.002PEP+1.197Pyr+2.039OAA+1.233AKG+0.133 GAP	Biomass+0.683Fum+1.017CD	0

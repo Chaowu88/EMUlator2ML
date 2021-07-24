@@ -1,0 +1,7 @@
+#constraints	lower_bound	upper_bound
+#flux value (mandatory, single value, no lb or ub)
+v36	100
+#ratio range (optional, net reactions)
+#flux range (mandatory, "allR" to assign all reverible reactions, "allIR" to assign irreversible reactions)
+allIR	0	200
+allR	-200	200
