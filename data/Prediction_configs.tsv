@@ -1,0 +1,23 @@
+#ratio_ID	model_path	errormodel_path	feature_path
+r3	path/to/r3/dnn.h5		path/to/r3/selected_features.tsv
+r4	path/to/r4/dnn.h5		path/to/r4/selected_features.tsv
+r5	path/to/r5/dnn.h5		path/to/r5/selected_features.tsv
+r11	path/to/r11/dnn.h5		path/to/r11/selected_features.tsv
+r12	path/to/r12/dnn.h5		path/to/r12/selected_features.tsv
+r13	path/to/r13/dnn.h5		path/to/r13/selected_features.tsv
+r14	path/to/r14/dnn.h5		path/to/r14/selected_features.tsv
+r15	path/to/r15/dnn.h5		path/to/r15/selected_features.tsv
+r16	path/to/r16/dnn.h5		path/to/r16/selected_features.tsv
+r18	path/to/r18/dnn.h5		path/to/r18/selected_features.tsv
+r21	path/to/r21/dnn.h5		path/to/r21/selected_features.tsv
+r22	path/to/r22/dnn.h5		path/to/r22/selected_features.tsv
+r43	path/to/r43/dnn.h5		path/to/r43/selected_features.tsv
+r44	path/to/r44/dnn.h5		path/to/r44/selected_features.tsv
+r45	path/to/r45/dnn.h5		path/to/r45/selected_features.tsv
+r54	path/to/r54/dnn.h5		path/to/r54/selected_features.tsv
+r55	path/to/r55/dnn.h5		path/to/r55/selected_features.tsv
+r56	path/to/r56/dnn.h5		path/to/r56/selected_features.tsv
+r57	path/to/r57/dnn.h5		path/to/r57/selected_features.tsv
+r60	path/to/r60/dnn.h5		path/to/r60/selected_features.tsv
+r61	path/to/r61/dnn.h5		path/to/r61/selected_features.tsv
+r62	path/to/r62/dnn.h5		path/to/r62/selected_features.tsv
