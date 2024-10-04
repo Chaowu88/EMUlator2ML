@@ -167,7 +167,8 @@ __Example:__
 python path/to/main4.py -o path/to/estimateted_fluxes -rf path/to/Reactions.tsv -cf path/to/Measured_constraints.tsv -nr 1000
 ```
 ## Citation
-Wu et al. (2022) Computational Framework for Machine-Learning-Enabled 13C Fluxomics, ACS Synthetic Biology 11(1):103–115.
+Wu et al. (2022) Computational Framework for Machine-Learning-Enabled 13C Fluxomics, ACS Synthetic Biology 11(1): 103–115.
+
 doi:[10.1021/acssynbio.1c00189](https://pubs.acs.org/doi/10.1021/acssynbio.1c00189)
    
 
